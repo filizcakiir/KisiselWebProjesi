@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Login</title>
+    <link rel="stylesheet" href="~/css1/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="contact-form">
+            <img src="~/css1/img/admin.jpg" style="width:200px;height: 200px" alt="admin" class="admin-img">
+            <h2>Admin Login</h2>
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            {
+                <div class="txtb">
+                    <input type="text" name="kullaniciAdi" placeholder="Username">
+                </div>
+                <div class="txtb">
+                    <input type="password" name="sifre" placeholder="Password">
+                </div>
+                <input type="submit" class="logbtn" value="Login">
+            }
+        </div>
+    </div>
+
+</body>
+</html>
